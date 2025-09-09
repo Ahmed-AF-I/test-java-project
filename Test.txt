@@ -1,0 +1,1 @@
+This is a test for File handling in Java using FileWriter class.
