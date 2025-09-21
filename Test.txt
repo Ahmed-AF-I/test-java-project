@@ -1,1 +1,7 @@
-This is a test for File handling in Java using FileWriter class.
+Hello World
+This is a test file.
+Hello World
+This is a test file.
+BufferedWriter Example
+This is a test file.
+This file is created using BufferedWriter.
