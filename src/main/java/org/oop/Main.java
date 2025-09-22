@@ -3,16 +3,17 @@ package org.oop;
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        FileWriter file = new FileWriter("Test.txt", true);
+    public static void main(String[] args) {
 
-        BufferedWriter bw = new BufferedWriter(file);
+        try(PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("Test.txt", true)))) {
+           pw.println("Hello World");
+           pw.println(79);
+           pw.print(true);
+           //pw.flush(); ---- not needed because of try-with-resources
+        }catch(IOException e) {
+            e.printStackTrace();
+        }
 
-        PrintWriter pw = new PrintWriter(bw,true);
-
-        pw.println(97);
-        pw.println("AAAA");
-        pw.println('B');
 
 //        BufferedReader br = new BufferedReader(new java.io.FileReader(file));
 //        String line;
